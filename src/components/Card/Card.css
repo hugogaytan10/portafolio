@@ -1,0 +1,45 @@
+.card-conteiner{
+    perspective: 1000px;
+}
+.card-inner{
+    transform-style: preserve-3d;
+    transition: all 0.5s;
+}
+/* Lado frontal de la tarjeta */
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* Oculta el reverso durante la animación */
+}
+
+/* Estilos de la tarjeta frontal */
+.card-front {
+    transform: rotateY(0); /* Inicialmente visible en el frente */
+}
+
+/* Estilos de la tarjeta trasera */
+.card-back {
+    transform: rotateY(180deg); /* Inicialmente oculta en el reverso */
+}
+
+/* Estilos cuando se aplica el efecto de volteo */
+.card-conteiner:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.header-card {
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #C193EC;
+}
+
+.actual-text {
+    box-sizing: border-box;
+    
+}
+.shadow-card{
+    box-shadow: 0px 0px 8px 0px #A06CD0;
+}
+

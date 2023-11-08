@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Establece el viewport en altura completa */
+.viewport {
+    height: 100vh;
+}
+
+/* Establece el contenedor de secciones para el desplazamiento suave vertical */
+.sections-container {
+    height: calc(100vh - 110px);
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    /* Habilite la barra de desplazamiento vertical */
+    scroll-snap-type: y mandatory;
+    /* Comportamiento de desplazamiento suave vertical obligatorio */
+}
+
+/* Estilo para las secciones */
+.section {
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+    /* Comportamiento de desplazamiento suave vertical en la parte superior de cada sección */
+    transition: transform 0.5s;
+    /* Agrega una transición suave para desplazar la sección */
+}
+
+
+/* Establece el comportamiento de la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #202020;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
